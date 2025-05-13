@@ -2,10 +2,14 @@
   
   on:
   # ska startas manuellt
+    workflow_dispatch:
   
   jobs:
     print-info:
-      runs-on: # vilken runner?
+      runs-on: ubuntu-latest
       steps:
-        - name: # namnge steget
-          run: # vad som ska göras
+        - name: Start of pipeline
+          run:  echo "Workflow starting"
+
+        - name: python version
+          run:  python --version
